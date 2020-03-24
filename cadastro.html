@@ -1,0 +1,39 @@
+<!-- formulário para criação de novos usuários  -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet"> <!-- Css do bootstrap-->
+    <title>Formulário de cadastro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-signin" style="background: #42dea4;">
+            <h2>Cadastrar Usuário</h2>
+            <form method="POST" action=""> <!-- POST é encapsulada junto ao corpo da requisição HTTP e não pode ser vista-->
+                <!--<label>Nome</label>-->
+                <input type="text" name="nome" placeholder="Digite o nome e o sobrenome" class="form-control"><br>
+                
+                <!--<label>E-mail</label>-->
+                <input type="text" name="email" placeholder="Digite o seu e-mail" class="form-control"><br>
+                
+                <!--<label>Usuário</label>-->
+                <input type="text" name="usuario" placeholder="Digite o usuário" class="form-control"><br>
+                
+                <!--<label>Senha</label>-->
+                <input type="password" name="senha" placeholder="Digite a senha" class="form-control"><br>
+                
+                <input type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-success"><br><br> <!-- Class do bootstrap-->
+                
+            </form>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+    
+</body>
+    
+</html>
