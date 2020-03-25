@@ -24,7 +24,7 @@
                 <input type="text" name="email" placeholder="Digite o seu e-mail" class="form-control"><br>
 
                 <!--<label> Telefone </label>-->
-                <input type="text" name="telefone" placeholder="Digite seu telefone" class="form-control phone-mask" ><br>
+                <input type="text" name="cel" placeholder="Digite seu celular" class="form-control" onkeypress="$(this).mask('(00) 00000-0000')" ><br>
                 
                 <!--<label>Usuário</label>-->
                 <input type="text" name="usuario" placeholder="Digite o usuário" class="form-control"><br>
@@ -32,14 +32,16 @@
                 <!--<label>Senha</label>-->
                 <input type="password" name="senha" placeholder="Digite a senha" class="form-control"><br>
                 
-                <input type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-success"><br><br> <!-- Class do bootstrap-->
+                <button type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-success"></button><br><br> <!-- Class do bootstrap-->
                 
             </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/bootstrap.js"></script>
-    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="js/scripts.js"
 </body>
     
 </html>
