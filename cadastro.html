@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/scripts.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/signin.css" rel="stylesheet"> <!-- Css do bootstrap-->
@@ -13,28 +14,27 @@
     <div class="container">
         <div class="form-signin" style="background: #42dea4;">
             <h2>Cadastrar Usuário</h2>
-            <form method="POST" action=""> <!-- POST é encapsulada junto ao corpo da requisição HTTP e não pode ser vista-->
+                        
                 <!--<label>Nome</label>-->
-                <input type="text" name="nome" placeholder="Digite o nome e o sobrenome" class="form-control"><br>
+                <input type="text" name="nome" placeholder="Digite o nome e o sobrenome" class="form-control" id="nome"><br>
                 
                 <!--<label>Data de nascimento</label>-->
-                <input type="date" name="dataNascimento" placeholder="Digite a sua data de nascimento" class="form-control"><br>
+                <input type="text" name="dataNascimento" placeholder="Data de nascimento (dd/mm/aaaa)" class="form-control" onkeypress="$(this).mask('00/00/0000')" id="data"><br>
 
                 <!--<label>E-mail</label>-->
-                <input type="text" name="email" placeholder="Digite o seu e-mail" class="form-control"><br>
+                <input type="text" name="email" placeholder="Digite o seu e-mail" class="form-control" id="email"><br>
 
                 <!--<label> Telefone </label>-->
-                <input type="text" name="cel" placeholder="Digite seu celular" class="form-control" onkeypress="$(this).mask('(00) 00000-0000')" ><br>
+                <input type="email" name="cel" placeholder="Digite seu celular" class="form-control" id="tel" onkeypress="$(this).mask('(00) 00000-0000')" ><br>
                 
                 <!--<label>Usuário</label>-->
-                <input type="text" name="usuario" placeholder="Digite o usuário" class="form-control"><br>
+                <input type="text" name="usuario" placeholder="Digite o usuário" class="form-control" id="usuario"><br>
                 
                 <!--<label>Senha</label>-->
-                <input type="password" name="senha" placeholder="Digite a senha" class="form-control"><br>
+                <input type="password" name="senha" placeholder="Digite a senha" class="form-control" id="senha"><br>
                 
-                <button type="submit" name="btnCadUsuario" value="Cadastrar" class="btn btn-success"></button><br><br> <!-- Class do bootstrap-->
+                <button name="btnCadUsuario" class="btn btn-success" onclick="cadUser()">Cadastrar</button><br><br> <!-- Class do bootstrap-->
                 
-            </form>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
