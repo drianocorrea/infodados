@@ -24,7 +24,7 @@
 
         //função chamada quando o usario clica no botão
         function cadUser(){
-            id = Math.floor(Math.random() * 10000000) //pegando um numero aleatório entre 0 e 10000000 *não recomendado mas por enquanto vai assim msm*
+            id = id+1;
             nome = document.getElementById("nome").value;
             data = document.getElementById("data").value;
             email = document.getElementById("email").value;
@@ -33,11 +33,19 @@
             senha = document.getElementById("senha").value;
 
             //if para controlar a quantidade de contas criadas
-            if(c1 == c+1){
+            if(nome=="" || data=="" || email=="" || telefone=="" ||login=="" || senha=="" ){
+                
+                alert("Erro ao cadastrar. Verifique se os campos foram preenchidos corretamente.")
+               
+            }
+            else {
                 user[c] = new usuario(id, nome, data, email, telefone, login, senha); //armazendo os dados no vetor
                 console.log(user[c]); //console.log para mostrar que está funcionando
                 c = c+1;
                 c1 = c1+1;
+
+                alert("Cadastro realizado com sucesso!!! Agora pode fazer seu login.")
+                window.location.href = "login.html";
             }
         }
         
