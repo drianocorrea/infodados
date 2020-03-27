@@ -8,7 +8,7 @@
         var id = -1;
         var user = [];
         var c = 0;
-        var c1 = 1;
+        var estado = false;
 
         //função para armazenar os valores do usuario
         //é chamada sempre que a funcão cadUser é chamada
@@ -34,18 +34,15 @@
 
             //if para controlar a quantidade de contas criadas
             if(nome=="" || data=="" || email=="" || telefone=="" ||login=="" || senha=="" ){
-                
                 alert("Erro ao cadastrar. Verifique se os campos foram preenchidos corretamente.")
-               
             }
             else {
                 user[c] = new usuario(id, nome, data, email, telefone, login, senha); //armazendo os dados no vetor
                 console.log(user[c]); //console.log para mostrar que está funcionando
                 c = c+1;
-                c1 = c1+1;
 
-                alert("Cadastro realizado com sucesso!!! Agora pode fazer seu login.")
-                window.location.href = "login.html";
+                alert("Cadastro realizado com sucesso!!!");
+                window.location.href = "index.html";
             }
         }
         
