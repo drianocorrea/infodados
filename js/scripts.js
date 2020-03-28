@@ -13,6 +13,7 @@ var user = [];
 var c = 0;
 var c1;
 var cont = 0;
+var cont = 0;
 var estado = false;
 
 //função para armazenar os valores do usuario
@@ -59,11 +60,13 @@ function cadUser(){
 function login(){
     c1 = 0;
     cont = 0;
+    var cont = 0;
     loginuser = document.getElementById("loginuser").value; //recebe o valor do input login
     pass = document.getElementById("pass").value; //recebe o valor do input senha
          
     while(cont == 0){ //condição while para verificar todos os emails
         if(loginuser == user[c1].email_){ //condição if para verificar se o email digitado tem armazenado no sistema              
+
             if(pass == user[c1].senha_){ // condição if para verificar se a senha está certa
                 alert("Entrou!")
                 console.log(user[c1].nome_);
@@ -74,12 +77,17 @@ function login(){
                 console.log(user[c1].senha_);
                 console.log(user[c1].type_);
                 cont = 1;
+                cont1 = 0;
             }else if(pass != user[c1].senha_){ 
-                alert("Senha errada!")
+                alert("Senha errada!");
                 cont = 1;
             }
         }else{
             c1++;
+            if(user[c1] == undefined){
+                alert("Email errado!");
+                cont = 1;
+            }
         }
     }
 }
