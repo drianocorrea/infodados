@@ -1,4 +1,3 @@
-
 var nome = "";
 var data = "";
 var email = "";
@@ -27,33 +26,6 @@ function usuario(id_, nome_, data_, email_, telefone_, loginnew_, senha_, type_)
     this.loginnew_ = loginnew_;
     this.senha_ = senha_;
     this.type_ = type_;
-}
-
-//função chamada quando o usario clica no botão
-function cadUser(){
-    id = id+1;
-    nome = document.getElementById("nome").value;
-    data = document.getElementById("data").value;
-    email = document.getElementById("email").value;
-    telefone = document.getElementById("tel").value;
-    loginnew = document.getElementById("loginnew").value;
-    senha = document.getElementById("senha").value;
-    type = document.getElementById("tipo").value;
- 
-    //if para controlar a quantidade de contas criadas
-    if(nome=="" || data=="" || email=="" || telefone=="" ||login=="" || senha=="" || type == "type"){
-        alert("Erro ao cadastrar. Verifique se os campos foram preenchidos corretamente.")
-    }
-    else{
-        user[c] = new usuario(id, nome, data, email, telefone, loginnew, senha, type); //armazendo os dados no vetor
-        console.log(user[c]); //console.log para mostrar que está funcionando
-        c = c+1;
-
-        alert("Cadastro realizado com sucesso!!!");
-        document.getElementById("form-signin").style.display = 'block';
-        document.getElementById("form-cad").style.display = 'none';
-        //window.location.href = "index.html";
-    }
 }
 
 //funcão para verificação do login
@@ -89,6 +61,33 @@ function login(){
                 cont = 1;
             }
         }
+    }
+}
+
+//função chamada quando o usario clica no botão
+function cadUser(){
+    id = id+1;
+    nome = document.getElementById("nome").value;
+    data = document.getElementById("data").value;
+    email = document.getElementById("email").value;
+    telefone = document.getElementById("tel").value;
+    loginnew = document.getElementById("loginnew").value;
+    senha = document.getElementById("senha").value;
+    type = document.getElementById("tipo").value;
+ 
+    //if para controlar a quantidade de contas criadas
+    if(nome=="" || data=="" || email=="" || telefone=="" ||login=="" || senha=="" || type == "type"){
+        alert("Erro ao cadastrar. Verifique se os campos foram preenchidos corretamente.")
+    }
+    else{
+        user[c] = new usuario(id, nome, data, email, telefone, loginnew, senha, type); //armazendo os dados no vetor
+        console.log(user[c]); //console.log para mostrar que está funcionando
+        c = c+1;
+
+        alert("Cadastro realizado com sucesso!!!");
+        document.getElementById("form-signin").style.display = 'block';
+        document.getElementById("form-cad").style.display = 'none';
+        //window.location.href = "index.html";
     }
 }
         
