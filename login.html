@@ -5,37 +5,76 @@
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
     <link href="css/signin.css" rel="stylesheet"> <!-- Css do bootstrap-->
     <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/scripts.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="form-signin" style="background: #42dea4;">
+        <div class="form-signin" id="form-signin" style="background: #42dea4;">
             <br><h2 id="login">Login</h2><br><br>
-            <form method="POST" action="">
 			<!--<label>Usuário</label>-->
-			<input type="text" name="usuario" placeholder="Digite o seu usuário" class="form-control"><br>
-			
-			<!--<label>Senha</label>-->
-			<input type="password" name="senha" placeholder="Digite a sua senha" class="form-control"><br>
-
-
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Botão dropdown
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Alguma ação</a>
-                      <a class="dropdown-item" href="#">Outra ação</a>
-                      <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                <input type="text" name="usuario" placeholder="Digite o seu usuário" class="form-control" id="loginuser"><br>
+                
+                <!--<label>Senha</label>-->
+                <input type="password" name="senha" placeholder="Digite a sua senha" class="form-control" id="pass"><br>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Botão dropdown
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Alguma ação</a>
+                        <a class="dropdown-item" href="#">Outra ação</a>
+                        <a class="dropdown-item" href="#">Alguma coisa aqui</a>
+                        </div>
                     </div>
-                </div>
-                <br><br>
+                    <br><br>
+                    <button class="btn btn-success" onclick="login()">Acessar</button>
+                    <!--<input type="submit"  value="Acessar" ><br><br> !-- Class do bootstrap-->
+                    Você ainda não possui uma conta? <a href="#" onclick="Mudarestado('form-signin')">Crie grátis</a> 
 
-                <input type="submit" name="btnCadUsuario" value="Acessar" class="btn btn-success"><br><br> <!-- Class do bootstrap-->
-                Você ainda não possui uma conta? <a href="cadastro.html">Crie grátis</a> 
-            </form>
+        </div>
+        <div class="form-signin" id="form-cad" style="background: #42dea4;">
+            <h2 style="text-align: center;">Cadastrar Usuário</h2>
+                        
+                <!--<label>Nome</label>-->
+                <input type="text" name="nome" placeholder="Digite o nome e o sobrenome" class="form-control" id="nome" value="João"><br>
+                
+                <!--<label>Data de nascimento</label>-->
+                <input type="text" name="dataNascimento" placeholder="Data de nascimento (dd/mm/aaaa)" class="form-control" value="26122000" onkeypress="$(this).mask('00/00/0000')" id="data"><br>
+
+                <!--<label>E-mail</label>-->
+                <input type="text" name="email" placeholder="Digite o seu e-mail" class="form-control" id="email" value="joaorrp46@gmail.com"><br>
+
+                <!--<label> Telefone </label>-->
+                <input type="email" name="cel" placeholder="Digite seu celular" class="form-control" id="tel" value="12991352978" onkeypress="$(this).mask('(00) 00000-0000')" ><br>
+                
+                <!--<label>Usuário</label>-->
+                <input type="text" name="usuario" placeholder="Digite o usuário" class="form-control" id="loginnew" value="joao"><br>
+                
+                <!--<label>Senha</label>-->
+                <input type="password" name="senha" placeholder="Digite a senha" class="form-control" id="senha" value="123456"><br>
+                
+                <button name="btnCadUsuario" class="btn btn-success" onclick="cadUser()">Cadastrar</button><br><br> <!-- Class do bootstrap-->
+
+                Já possui uma conta? <a href="#" onclick="Mudarestado('form-signin')">Login</a>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="js/bootstrap.js"></script>
+    <script>    
+        var display = document.getElementById("form-cad").style.display;
+           document.getElementById("form-cad").style.display = 'none';
+        function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none"){
+            document.getElementById(el).style.display = 'block';
+            document.getElementById("form-cad").style.display = 'none';
+        }else{
+           document.getElementById(el).style.display = 'none';
+           document.getElementById("form-cad").style.display = 'block';
+        }
+    }
+    </script>
 </body>
 </html>
