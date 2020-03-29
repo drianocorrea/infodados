@@ -1,22 +1,60 @@
-@import url('https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap');
+button {
+  border: white 1px;
+}
+
 body {
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #eee;
-  font-family: 'Baloo Da 2', cursive;
-  ;
+  display: flex;
 }
+
+#login {
+  text-align: center; 
+  margin-left: 0px;
+}
+
+.banner img {
+  height: 420px;
+  width: 630px;
+  margin-top: 32px;
+  border-radius: 22%;
+  border: 10px outset ;
+  float: left;
+}
+
 .container{
   height: 400px;
 }
+
 .form-signin {
+  background: #f0f0f5;
   position: relative;
-  top: -40px;
+  top: 55px;
+  
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  float: right;
+  
+  align-items: center;
+  justify-content: center;
 }
+
+.form-signin h2 {
+    margin-bottom: 55px;
+}
+
+.form-signin .form-check {
+  margin-top: -8px;
+  margin-bottom: 27px;
+}
+
+.form-signin button {
+  margin-bottom: 30px;
+  margin-top: 12px;
+}
+
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
@@ -48,20 +86,33 @@ body {
 }
 
 .form-cad{
+  background: #f0f0f5;
   position: relative;
-  top: -40px;
+  top: -35px;
+  
   max-width: 330px;
   padding: 15px;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  float: right;
+  
+  align-items: center;
+  justify-content: center;
 }
-.form-cad.form-signin-heading,
+
+.form-cad h2 {
+  margin-bottom: 20px;
+}
+
+#btn-cadastrar {
+  margin-bottom: 4px;
+}
+
+.form-cad.form-cad-heading,
 .form-cad .checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
-.form-cad .checkbox {
-  font-weight: normal;
-}
+
 .form-cad .form-control {
   position: relative;
   height: auto;
@@ -84,3 +135,24 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+.form-cad select {
+  margin-top: 10px;
+
+}
+
+.form-cad button {
+  margin-top: 10px;
+}
+
+.redes-sociais {
+  text-align: center;
+  display: flex;
+}
+.redes-sociais img {
+  float: left;
+
+}
+.redes-sociais button + button{
+  margin-left: 5px;
+} 

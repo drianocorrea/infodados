@@ -3,6 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
     <link href="css/signin.css" rel="stylesheet"> <!-- Css do bootstrap-->
     <title>Login</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -13,30 +14,31 @@
 </head>
 <body>
     <div class="container">
-        <div class="form-signin" id="form-signin" style="background: #42dea4;">
-            <br><h2 id="login" style="text-align: center; margin-left: 0px;">Login</h2><br>
+        <div class="banner">
+            <img name="slide" width="630px" height="420px">
+            <script src="js/login.js"></script>
+        </div>
+        <div class="form-signin" id="form-signin">
+            <h2 id="login">
+                Faça seu Login:
+            </h2>
+
 			<!--<label>Usuário</label>-->
             <input type="text" name="usuario" placeholder="Digite o seu usuário" class="form-control" id="loginuser"><br>
-             
             <!--<label>Senha</label>-->
             <input type="password" name="senha" placeholder="Digite a sua senha" class="form-control" id="pass" style="border-radius: 5px;"><br>
-            <!--<div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Botão dropdown
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Alguma ação</a>
-                    <a class="dropdown-item" href="#">Outra ação</a>
-                    <a class="dropdown-item" href="#">Alguma coisa aqui</a>
-                </div>
-            </div>-->
-            <br><br>
+
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Lembrar usuário</label>
+            </div>
+
             <button class="btn btn-success" onclick="login()">Acessar</button>
             <br>
             Você ainda não possui uma conta? <a href="#" onclick="Mudarestado('form-signin')">Crie grátis</a> 
         </div>
-        <div class="form-cad" id="form-cad" style="background: #42dea4;">
-            <h2 style="text-align: center;">Cadastrar Usuário</h2>
+        <div class="form-cad" id="form-cad">
+            <h2 style="text-align: center;">Cadastre-se agora mesmo!</h2>
                         
                 <!--<label>Nome</label>-->
                 <input type="text" name="nome" placeholder="Digite o nome e o sobrenome" class="form-control" id="nome" value="João" style="padding: 5px 10px 5px 10px;">
@@ -62,9 +64,17 @@
                     <option value="ad">Anunciante</option>
                 </select>
                 
-                <button name="btnCadUsuario" class="btn btn-success" onclick="cadUser()">Cadastrar</button><br><!-- Class do bootstrap-->
-                <button name="btnCadUsuario" class="btn btn-success" style="background-color: #3b5998;">Entre com Facebook</button>
-                <button name="btnCadUsuario" class="btn btn-success" style="background-color: #c36854;">Entre com Email</button> 
+                <button name="btnCadUsuario" id="btn-cadastrar" class="btn btn-success" onclick="cadUser()">Cadastrar</button><br><!-- Class do bootstrap-->
+                <div class="redes-sociais">
+                    <button name="btnCadUsuario" class="btn btn-success" style="background-color: #4267B2; font: bold;">
+                        <img src="img/icons/facebook2.svg" width="20px" height="20px">
+                        Facebook
+                    </button>
+                    <button name="btnCadUsuario" class="btn btn-success" style="background-color: #d44638; font: bold;">
+                        <img src="img/icons/mail2.svg" width="20px" height="20px">
+                        Gmail
+                    </button> 
+                </div>
                 <br>Já possui uma conta? <a href="#" onclick="Mudarestado('form-signin')">Login</a>
         </div>
     </div>
