@@ -67,6 +67,7 @@ function login(){
 //função chamada quando o usario clica no botão
 function cadUser(){
     id = id+1;
+    
     nome = document.getElementById("nome").value;
     data = document.getElementById("data").value;
     email = document.getElementById("email").value;
@@ -87,7 +88,7 @@ function cadUser(){
         alert("Cadastro realizado com sucesso!!!");
         document.getElementById("form-signin").style.display = 'block';
         document.getElementById("form-cad").style.display = 'none';
-        //window.location.href = "index.html";
+        window.location.href = "index.html";
     }
 }
         
